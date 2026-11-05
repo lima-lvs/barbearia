@@ -1,0 +1,522 @@
+
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+:root {
+    --preto: #111;
+    --cinza: #1c1c1c;
+    --dourado: #c9a44c;
+    --branco: #fff;
+}
+
+
+/* =================================
+   CABEÇALHO
+================================= */
+
+header {
+    width: 100%;
+    background-color: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--dourado);
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--dourado);
+}
+
+.btn-agendar {
+    background-color: var(--dourado);
+    color: #111;
+    padding: 13px 20px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-agendar:hover {
+    background-color: #fff;
+    transform: translateY(-3px);
+}
+
+
+/* =================================
+   SEÇÃO INICIAL
+================================= */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 10%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.95),
+            rgba(0,0,0,0.4)
+        ),
+        url("https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=1600")
+        center/cover no-repeat;
+}
+
+.hero-conteudo {
+    max-width: 650px;
+}
+
+.subtitulo {
+    color: var(--dourado);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: clamp(45px, 7vw, 75px);
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.hero h2 span,
+.titulo-secao h2 span,
+.sobre h2 span,
+.destaque span {
+    color: var(--dourado);
+}
+
+.descricao {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 25px 0;
+    max-width: 500px;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: var(--dourado);
+    color: #111;
+    padding: 16px 25px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: #fff;
+    transform: translateY(-3px);
+}
+
+
+/* =================================
+   SOBRE A BARBEARIA
+================================= */
+
+.sobre {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.sobre-imagem {
+    flex: 1;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.sobre-conteudo {
+    flex: 1;
+}
+
+.sobre h2 {
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.sobre-conteudo p:not(.subtitulo) {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.sobre .btn-principal {
+    margin-top: 15px;
+}
+
+
+/* =================================
+   SERVIÇOS
+================================= */
+
+.servicos {
+    background-color: #191919;
+    padding: 100px 30px;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.titulo-secao h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.titulo-secao > p:last-child {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.servicos-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card-servico {
+    background-color: #222;
+    padding: 35px 25px;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.card-servico:hover {
+    transform: translateY(-10px);
+    border-bottom-color: var(--dourado);
+}
+
+.icone {
+    color: var(--dourado);
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.card-servico h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.card-servico p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 65px;
+}
+
+.card-servico h4 {
+    color: var(--dourado);
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+/* =================================
+   DESTAQUE
+================================= */
+
+.destaque {
+    padding: 100px 20px;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.85),
+            rgba(0,0,0,0.85)
+        ),
+        url("https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=1500")
+        center/cover no-repeat;
+}
+
+.destaque h2 {
+    font-size: 42px;
+    line-height: 1.4;
+}
+
+.destaque p {
+    color: #ccc;
+    margin-top: 20px;
+}
+
+
+/* =================================
+   GALERIA
+================================= */
+
+.galeria {
+    padding: 100px 30px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.galeria-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.galeria-container img:hover {
+    transform: scale(1.03);
+    filter: brightness(0.7);
+}
+
+
+/* =================================
+   CONTATO
+================================= */
+
+.contato {
+    background-color: #191919;
+    padding: 100px 30px;
+}
+
+.contato-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contato-info h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.contato-info p {
+    color: #bbb;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 16px;
+    background-color: #252525;
+    border: 1px solid #333;
+    color: #fff;
+    outline: none;
+    font-family: inherit;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: var(--dourado);
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario button {
+    background-color: var(--dourado);
+    color: #111;
+    padding: 16px;
+    border: none;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+    background-color: #fff;
+}
+
+
+/* =================================
+   RODAPÉ
+================================= */
+
+footer {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+footer p {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.copyright {
+    border-top: 1px solid #292929;
+    padding-top: 20px;
+    margin-top: 30px !important;
+}
+
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .servicos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre {
+        gap: 35px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 60px 25px;
+    }
+
+    .hero h2 {
+        font-size: 45px;
+    }
+
+    .sobre {
+        flex-direction: column;
+        padding: 70px 25px;
+    }
+
+    .sobre-imagem img {
+        height: 300px;
+    }
+
+    .sobre h2 {
+        font-size: 34px;
+    }
+
+    .servicos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-secao h2 {
+        font-size: 30px;
+    }
+
+    .destaque h2 {
+        font-size: 30px;
+    }
+
+    .galeria-container {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-container img {
+        height: 250px;
+    }
+
+    .contato-container {
+        grid-template-columns: 1fr;
+    }
+
+}
